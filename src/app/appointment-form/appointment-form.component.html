@@ -1,0 +1,14 @@
+<!-- appointment-form.component.html -->
+<div id="container">
+  <h3 style="text-align: center; font-size: larger; color: rgb(197, 56, 25);">Appointment Form</h3>
+  <form>
+    <input
+      type="text"
+      placeholder="Appointment Title"
+      [(ngModel)]="title"
+      name="text"
+    />
+    <input type="datetime-local" [(ngModel)]="date" name="date" /><br/>
+    <button id="addButton" (click)="addOrUpdateAppointment()">{{ editIndex !== null ? 'Update' : 'Add' }}</button>
+  </form>
+</div>

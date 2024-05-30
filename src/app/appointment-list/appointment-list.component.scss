@@ -1,0 +1,30 @@
+.cdk-drop-list {
+    min-height: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+  }
+  
+  .cdk-drop-list div {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    margin-top: 40px;
+  }
+  
+  .cdk-drop-list button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .cdk-drop-list button:hover {
+    background-color: #e53935;
+  }
+  
