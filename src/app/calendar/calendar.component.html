@@ -1,6 +1,122 @@
-<div *ngFor="let appointment of appointments">
-    <p>{{ appointment.title }}</p>
-    <p>{{ appointment.date }}</p>
-    <button (click)="deleteAppointment(i)">Delete</button>
+<!-- <div class="calendar">
+  <div class="header">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="days">
+    <div *ngFor="let day of days" class="day">
+      <div class="date">{{ day.getDate() }}</div>
+      <div style="overflow-y: scroll;" class="appointments">
+        <div *ngFor="let appointment of (getAppointmentsForDay(day) | async)" cdkDrag>
+          {{ appointment.title }} ({{ appointment.startTime }} - {{ appointment.endTime }})
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+
+ <!-- <div class="calendar">
+  <div>
+    <label for="month">Select Month: </label>
+    <select name="month" id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange()">
+      <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+    </select>
   </div>
   
+  <div class="header">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="days">
+    <div *ngFor="let day of days" class="day">
+      <div class="date">{{ day.getDate() }}</div>
+      <div style="overflow-y: scroll;" class="appointments">
+        <div *ngFor="let appointment of (getAppointmentsForDay(day) | async)" cdkDrag>
+          {{ appointment.title }} ({{ appointment.startTime }} - {{ appointment.endTime }})
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="calendar">
+  <div>
+    <label for="month">Select Month: </label>
+    <select name="month" id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange($event)">
+      <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+    </select>
+  </div>
+  
+  <div class="header">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="days">
+    <div *ngFor="let day of days" class="day">
+      <div class="date">{{ day.getDate() }}</div>
+      <div style="overflow-y: scroll;" class="appointments">
+        <div *ngFor="let appointment of (getAppointmentsForDay(day) | async)" cdkDrag>
+          {{ appointment.title }} ({{ appointment.startTime }} - {{ appointment.endTime }})
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="calendar">
+  <!-- Month Selector -->
+  <div>
+    <label for="month">Select Month: </label>
+    <select name="month" id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange($event)">
+      <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+    </select>
+  </div>
+
+  <!-- Year Selector -->
+  <div>
+    <label for="year">Select Year: </label>
+    <select name="year" id="year" [(ngModel)]="selectedYear" (change)="onYearChange()">
+      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+  
+  <!-- Calendar Grid -->
+  <div class="header">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="days">
+    <div *ngFor="let day of days" class="day">
+      <div class="date">{{ day.getDate() }}</div>
+      <div style="overflow-y: scroll;" class="appointments">
+        <div *ngFor="let appointment of (getAppointmentsForDay(day) | async)" cdkDrag>
+          {{ appointment.title }} ({{ appointment.startTime }} - {{ appointment.endTime }})
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -20,7 +20,7 @@ export class AppointmentFormComponent implements OnChanges {
 
   constructor(private appointmentService: AppointmentService) {
     this.title = "Medical";
-    this.date = "2024-05-31T16:52";
+    this.date = "2024-06-06T16:52";
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -35,7 +35,7 @@ export class AppointmentFormComponent implements OnChanges {
       const appointment: Appointment = {
         title: this.title,
         date: new Date(this.date),
-        startTime: '',
+        startTime: this.date.substring(11),
         endTime: ''
       };
 

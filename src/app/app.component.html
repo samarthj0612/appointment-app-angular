@@ -1,10 +1,7 @@
-<!-- app.component.html -->
-<div id="container">
-  <app-appointment-form
-    [appointmentToEdit]="appointmentToEdit ? appointmentToEdit.appointment : null"
-    [editIndex]="appointmentToEdit ? appointmentToEdit.index : null"
-    (clearEdit)="clearEdit()"
-  ></app-appointment-form>
-  <hr>
-  <app-appointment-list (editAppointment)="onEditAppointment($event)"></app-appointment-list>
-</div>
+<!-- <app-header></app-header> -->
+<nav>
+  <a routerLink="/calendar" routerLinkActive="active-link">Calendar View</a>
+  <a routerLink="/appointments" routerLinkActive="active-link">Appointments</a>
+</nav>
+<hr>
+<router-outlet></router-outlet>

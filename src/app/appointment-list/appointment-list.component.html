@@ -1,5 +1,5 @@
 <div cdkDropList (cdkDropListDropped)="drop($event)" >
-  <div *ngFor="let appointment of appointments; let i = index" cdkDrag>
+  <div *ngFor="let appointment of (appointments$ | async); let i = index" cdkDrag>
     <p>{{ appointment.title }}</p>
     <p>{{ appointment.date }}</p>
     <button (click)="onEditAppointment(appointment, i)">Edit</button>

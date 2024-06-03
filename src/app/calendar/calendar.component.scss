@@ -1,0 +1,87 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  text-align: right;
+  padding: 5px;
+}
+
+.appointments {
+  flex-grow: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appointments div {
+  background-color: #e0e0e0;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  text-align: right;
+  padding: 5px;
+}
+
+.appointments {
+  flex-grow: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appointments div {
+  background-color: #e0e0e0;
+  padding: 2px;
+  border-radius: 2px;
+}
