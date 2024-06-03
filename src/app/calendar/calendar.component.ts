@@ -287,40 +287,6 @@ export class CalendarComponent implements OnInit {
     this.days = this.getMonthDays(this.selectedYear, this.selectedMonth);
   }
 
-  // getMonthDays(year: number, month: number): Date[] {
-  //   const date = new Date(year, month, 1);
-  //   const days: Date[] = [];
-  //   while (date.getMonth() === month) {
-  //     days.push(new Date(date));
-  //     date.setDate(date.getDate() + 1);
-  //   }
-  //   return days;
-  // }
-
-  // getMonthDays(year: number, month: number): Date[] {
-  //   const firstDayOfMonth = new Date(year, month, 1);
-  //   const startingDay = firstDayOfMonth.getDay(); // 0 for Sunday, 1 for Monday, etc.
-  //   const days: Date[] = [];
-    
-  //   // Calculate the offset to align the first day with Sunday
-  //   let offset = startingDay === 0 ? 0 : 7 - startingDay;
-    
-  //   // Add the days of the previous month (if necessary)
-  //   for (let i = 0; i < offset; i++) {
-  //     const prevMonthDay = new Date(year, month, 1 - offset + i);
-  //     days.push(prevMonthDay);
-  //   }
-  
-  //   // Add the days of the current month
-  //   const lastDayOfMonth = new Date(year, month + 1, 0).getDate();
-  //   for (let i = 1; i <= lastDayOfMonth; i++) {
-  //     const currentMonthDay = new Date(year, month, i);
-  //     days.push(currentMonthDay);
-  //   }
-  
-  //   return days;
-  // }
-
   getMonthDays(year: number, month: number): Date[] {
     const firstDayOfMonth = new Date(year, month, 1);
     const startingDay = firstDayOfMonth.getDay(); // 0 for Sunday, 1 for Monday, etc.
@@ -354,8 +320,6 @@ export class CalendarComponent implements OnInit {
     return days;
   }
   
-  
-
   getAppointmentsForDay(date: Date): Observable<Appointment[]> {
     return this.appointments$.pipe(
       map(appointments => appointments.filter(appointment => {
@@ -377,10 +341,6 @@ export class CalendarComponent implements OnInit {
       this.appointmentService.moveAppointment(event.previousIndex, event.currentIndex);
     }
   }
-
-  // onMonthChange(): void {
-  //   this.updateCalendar();
-  // }
 
   onMonthChange(event: Event): void {
     const target = event.target as HTMLSelectElement;

@@ -53,9 +53,9 @@ export class AppointmentFormComponent implements OnChanges {
   }
 
   clearForm(): void {
-    // this.title = '';
-    // this.date = '';
-    // this.editIndex = null;
+    this.title = '';
+    this.date = '';
+    this.editIndex = null;
   }
 
   // addAppointment(): void {
