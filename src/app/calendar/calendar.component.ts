@@ -276,7 +276,9 @@ export class CalendarComponent implements OnInit {
   years: number[] = Array.from({length: 10}, (_, i) => new Date().getFullYear() + i);
 
 
-  constructor(private appointmentService: AppointmentService) {}
+  constructor(private appointmentService: AppointmentService) {
+    console.log("from calendar");
+  }
 
   ngOnInit(): void {
     this.updateCalendar();

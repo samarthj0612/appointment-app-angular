@@ -15,6 +15,10 @@ import { Appointment } from '../../../appointment.model';
 export class AppointementsComponent {
   appointmentToEdit: { appointment: Appointment, index: number } | null = null;
 
+  constructor(){
+    console.log("from appointments");
+  }
+
   onEditAppointment(event: { appointment: Appointment, index: number }): void {
     this.appointmentToEdit = event;
   }
