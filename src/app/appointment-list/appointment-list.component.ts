@@ -33,7 +33,7 @@ export class AppointmentListComponent implements OnInit {
 
   drop(event: CdkDragDrop<Appointment[]>): void {
     if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      // moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
       this.appointmentService.moveAppointment(event.previousIndex, event.currentIndex);
     }
   }

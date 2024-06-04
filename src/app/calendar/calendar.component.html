@@ -1,20 +1,23 @@
 <div class="calendar">
-  <!-- Month Selector -->
-  <div>
-    <label for="month">Select Month: </label>
-    <select name="month" id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange($event)">
-      <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
-    </select>
+  <div style="display: flex; gap: 20px; margin: 14px 10px;">
+    <!-- Year Selector -->
+    <div>
+      <label for="year">Select Year: </label>
+      <select name="year" id="year" [(ngModel)]="selectedYear" (change)="onYearChange()">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+
+    <!-- Month Selector -->
+    <div>
+      <label for="month">Select Month: </label>
+      <select name="month" id="month" [(ngModel)]="selectedMonth" (change)="onMonthChange($event)">
+        <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+      </select>
+    </div>
   </div>
 
-  <!-- Year Selector -->
-  <div>
-    <label for="year">Select Year: </label>
-    <select name="year" id="year" [(ngModel)]="selectedYear" (change)="onYearChange()">
-      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
-    </select>
-  </div>
-  
+
   <!-- Calendar Grid -->
   <div class="header">
     <div>Sun</div>
